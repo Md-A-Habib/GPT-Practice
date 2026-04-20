@@ -145,7 +145,7 @@ aabccdeff
 ✅ Output:
 b
 
-*/
+
 
 
 
@@ -170,6 +170,44 @@ int main(){
 }
 
 
+===========================================================================================================================================
+
+📌 Topic: String Logic (Intermediate)
+Problem:
+
+Given a string s,
+👉 check if it is a palindrome
+
+📥 Input:
+madam
+📤 Output:
+YES
+
+📥 Input:
+hello
+📤 Output:
+NO
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    string s, rev;
+    cin>> s;
+
+    rev=s;
+    reverse(rev.begin(), rev.end());
+
+    if(rev==s){
+        cout << "YES" << endl;
+    }else{
+        cout << "NO" << endl;
+    }
+}
+
+*/
 
 
 
