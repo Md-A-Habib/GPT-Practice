@@ -61,7 +61,7 @@ Input n numbers
 📤 Output
 5 4 3 2 1
 
-*/
+
 
 
 #include <bits/stdc++.h>  
@@ -83,3 +83,42 @@ int main(){
     }
     cout << endl;
 }
+
+>>>>>>>>>>>>>>>🧩 Problem:
+
+Find the maximum element in a vector
+
+📥 Input
+5
+2 8 1 6 3
+
+📤 Output
+8
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>> n;
+
+    vector<int> v;
+    for(int i=0; i<n; i++){
+        int x;
+        cin>> x;
+        v.push_back(x);
+    }
+
+    int mx=v[0];
+    for(int i=0; i<v.size(); i++){
+        if(v[i]>mx){
+            mx=v[i];
+        }
+    }
+    cout << mx << endl;
+}
+
+<<<<<<<<  int mx = *max_element(v.begin(), v.end());  >>>>>>>>>>>>>
+
+*/
