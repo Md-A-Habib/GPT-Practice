@@ -121,4 +121,45 @@ int main(){
 
 <<<<<<<<  int mx = *max_element(v.begin(), v.end());  >>>>>>>>>>>>>
 
+
+
+9️⃣ Taking Input
+
+🎯 Normal loop
+for(int i = 0; i < v.size(); i++){
+    cin >> v[i];
+}
+
+👉 Same as:
+for(auto &x : v){
+    cin >> x;
+}
+
+👉 auto &x = shortcut for v[i]
+
+➡️Example Code:
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin >> n;
+
+    vector<int> v(n);  // create vector of size n
+
+    // input using range-based loop
+    for(auto &x : v){
+        cin >> x;
+    }
+
+    // print elements
+    for(auto x : v){
+        cout << x << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
 */
