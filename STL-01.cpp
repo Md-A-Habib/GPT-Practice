@@ -1,11 +1,11 @@
 /*
 >>>>>>>>>>>>>BASIC<<<<<<<<<<<<<<<
 
-1. Create an vector variable
+1️⃣. Create an vector variable
 vector<int> v;
 👉 Creates an empty vector of integers
 
-2.Add elements
+2️⃣ Add elements
 v.push_back(10);
 v.push_back(20);
 v.push_back(30);
@@ -13,26 +13,26 @@ v.push_back(30);
 👉 Now:
 v = [10, 20, 30]
 
-3. Access elements
+3️⃣ Access elements
 cout << v[0]; // 10
 cout << v[1]; // 20
 
 👉 Same as array
 
-4. Size of vector
+4️⃣ Size of vector
 v.size()
 
-5. Loop through vector
+5️⃣ Loop through vector
 for(int i = 0; i < v.size(); i++){
     cout << v[i] << " ";
 }
 
-6. Reverse print
+6️⃣ Reverse print
 for(int i = v.size()-1; i >= 0; i--){
     cout << v[i] << " ";
 }
 
-7. Input n elements
+7️⃣ Input n elements
 int n;
 cin >> n;
 
@@ -44,8 +44,10 @@ for(int i = 0; i < n; i++){
     v.push_back(x);
 }
 
-8. Initialize directly
+8️⃣ Initialize directly
 vector<int> v = {1, 2, 3, 4};
+
+
 
 
 >>>>>>>>>>>>📌 Problem:
@@ -83,6 +85,8 @@ int main(){
     }
     cout << endl;
 }
+
+
 
 >>>>>>>>>>>>>>>🧩 Problem:
 
@@ -162,4 +166,55 @@ int main(){
 }
 
 
-*/
+
+1️⃣0️⃣ In-built shortcut
+🔹Sort
+    sort(v.begin(), v.end());                    // ascending
+    sort(v.begin(), v.end(), greater<int>());   // descending
+
+🔹Reverse
+    reverse(v.begin(), v.end());
+
+🔹Clear
+    v.clear();   // remove all elements
+
+🔹Check empty
+    v.empty();   // true or false
+
+
+
+
+>>>>>>>>>>>>>>>>🧩 Problem: Remove Duplicates from Sorted Array
+📌 Problem Statement
+You are given a sorted array of n integers.
+Remove all duplicate elements and print only unique elements in order.
+
+📥 Input
+First line: integer n
+Second line: n integers (sorted)
+
+📤 Output
+Print the array after removing duplicates
+
+🔒 Constraints
+1≤n≤10
+5
+Elements are already sorted
+
+🧪 Example 1
+Input
+7
+1 1 2 2 3 4 4
+
+Output
+1 2 3 4
+
+🧪 Example 2
+Input
+5
+5 5 5 5 5
+
+Output
+5
+    */
+
