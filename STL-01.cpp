@@ -218,7 +218,7 @@ Output
 5
 
 =====================================================================================================================
-    */
+    
 
 
 #include <bits/stdc++.h>
@@ -244,3 +244,73 @@ int main(){
     cout << endl;
 }
 
+🧩 Problem>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ Merge Two Sorted Arrays
+📌 Problem Statement
+
+You are given two sorted arrays.
+Merge them into a single sorted array and print it.
+
+📥 Input
+First line: integer n
+Second line: n sorted integers
+
+Third line: integer m
+Fourth line: m sorted integers
+
+📤 Output
+Print the merged sorted array
+
+🔒 Constraints
+1≤n,m≤10
+5
+
+🧪 Example
+Input
+4
+1 3 5 7
+5
+2 4 6 8 9
+
+Output
+1 2 3 4 5 6 7 8 9
+
+===================================================================================================================
+*/
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+
+    int n,m, i=0, j=0;
+    
+    cin>> n;
+    vector<int>v1(n);
+    while(i<n){
+        cin>> v1[i];
+        i++;
+    }
+
+    cin>> m;
+    vector<int>v2(m);
+    while(j<m){
+        cin>> v2[j];
+        j++;
+    }
+
+    int t= n+m;
+    vector<int>nw(t);
+
+    for(int k=0; k<n; k++){
+        nw[k] = v1[k];
+    }
+    for(int k=n; k<t; k++){
+        nw[k] = v2[k-n];
+    }
+
+    sort(nw.begin(), nw.end());
+
+    for(int k=0; k<t; k++){
+        cout << nw[k]<< " ";
+    }
+}
