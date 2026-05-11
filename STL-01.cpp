@@ -320,6 +320,7 @@ int main(){
     }
 }
 
+
 🧩 Problem>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  Two Sum (Sorted Array)
 
@@ -357,8 +358,8 @@ Input
 Output
 NO
 
-===================================================================================================================
-*/
+======================================================================================================================
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -388,4 +389,134 @@ int main(){
     }else{
         cout << "NO" << endl;
     }
+}
+
+
+🧩 Problem>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Move All Zeros to End
+📌 Problem Statement
+Given an array of n integers, move all 0s to the end while maintaining the relative order of non-zero elements.
+
+📥 Input
+First line: integer n
+Second line: n integers
+
+📤 Output
+Print the modified array
+
+🔒 Constraints
+1≤n≤10
+5
+
+🧪 Example 1
+Input
+6
+0 1 0 3 12 0
+Output
+1 3 12 0 0 0
+
+🧪 Example 2
+Input
+5
+1 2 3 4 5
+Output
+1 2 3 4 5
+
+======================================================================================================================
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n; cin>> n;
+
+    vector<int>v(n);
+    for(int i=0; i<n; i++){
+        cin>> v[i];
+    }
+
+    int not_zero=0;
+    for(int i=0; i<n; i++){
+        if(v[i] != 0) {
+            cout << v[i] << " ";
+            not_zero++;
+        }
+    }
+    for(int i=0; i<n-not_zero; i++){
+        cout << 0 << " ";
+    }
+    cout << endl;
+}
+
+🧩 Final problem:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Vector Practice Problem
+
+📌 Problem Statement
+Given an array of n integers, find the second largest distinct element.
+If no such element exists, print:
+-1
+
+📥 Input
+First line: integer n
+Second line: n integers
+
+📤 Output
+Print the second largest distinct element
+
+🔒 Constraints
+1≤n≤10
+5
+
+🧪 Example 1
+Input
+5
+2 8 1 6 3
+
+Output
+6
+
+🧪 Example 2
+Input
+5
+7 7 7 7 7
+
+Output
+-1
+
+🧪 Example 3
+Input
+6
+10 5 10 8 7 8
+
+Output
+8
+
+======================================================================================================================
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+
+    vector<int> v(n);
+
+    for(int i = 0; i < n; i++){
+        cin >> v[i];
+    }
+
+    sort(v.begin(), v.end(), greater<int>());
+
+    int mx = v[0];
+    int second = -1;
+
+    for(int i = 1; i < n; i++){
+        if(v[i] != mx){
+            second = v[i];
+            break;
+        }
+    }
+    cout << second << endl;
 }
