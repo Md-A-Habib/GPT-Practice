@@ -50,7 +50,7 @@ vector<int> v = {1, 2, 3, 4};
 
 
 
->>>>>>>>>>>>📌 Problem:
+🧩 Problem:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Input n numbers
 👉 store in vector
@@ -64,6 +64,7 @@ Input n numbers
 5 4 3 2 1
 
 
+=====================================================================================================================
 
 
 #include <bits/stdc++.h>  
@@ -88,7 +89,7 @@ int main(){
 
 
 
->>>>>>>>>>>>>>>🧩 Problem:
+🧩 Problem:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 Find the maximum element in a vector
 
@@ -100,6 +101,7 @@ Find the maximum element in a vector
 8
 
 
+=====================================================================================================================
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -184,7 +186,9 @@ int main(){
 
 
 
->>>>>>>>>>>>>>>>🧩 Problem: Remove Duplicates from Sorted Array
+🧩 Problem:>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+Remove Duplicates from Sorted Array
 📌 Problem Statement
 You are given a sorted array of n integers.
 Remove all duplicate elements and print only unique elements in order.
@@ -244,6 +248,7 @@ int main(){
     cout << endl;
 }
 
+
 🧩 Problem>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
  Merge Two Sorted Arrays
@@ -277,7 +282,7 @@ Output
 1 2 3 4 5 6 7 8 9
 
 ===================================================================================================================
-*/
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
@@ -312,5 +317,75 @@ int main(){
 
     for(int k=0; k<t; k++){
         cout << nw[k]<< " ";
+    }
+}
+
+🧩 Problem>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Two Sum (Sorted Array)
+
+📌 Problem Statement
+Given a sorted array and a target x,
+find if there exist two numbers whose sum is x.
+
+📥 Input
+First line: integer n
+Second line: n sorted integers
+Third line: target x
+
+📤 Output
+Print:
+YES
+
+if such pair exists, otherwise:
+NO
+
+🧪 Example 1
+Input
+5
+1 2 3 4 6
+7
+
+Output
+YES
+
+🧪 Example 2
+Input
+5
+1 2 3 9 10
+8
+
+Output
+NO
+
+===================================================================================================================
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n, t;
+    cin>> n;
+    
+    vector<int>v(n);
+    for(int i=0; i<n; i++){
+        cin>> v[i];
+    }
+
+    int x; cin>> x;
+    int found=0;
+    for(int i=0; i<n; i++){
+        int sum;
+        for(int j=i+1; j<n; j++){
+            sum= v[i]+v[j];
+            if (sum==x){
+                found++;
+                break;
+            }
+        }
+    }
+    if(found>0){
+        cout << "YES" << endl;
+    }else{
+        cout << "NO" << endl;
     }
 }
